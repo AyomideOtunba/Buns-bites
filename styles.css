@@ -23,33 +23,20 @@ header {
   margin-left: 10px;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+.navigation ul li {
+  margin-left: 10px;
+}
+
+.navigation ul li a {
   text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
+  color: #333;
 }
 
 /* Main */
@@ -107,30 +94,72 @@ footer {
 
 /* Responsive Styles */
 
-@media screen and (max-width: 600px) {
-  /* Adjustments for screens with width up to 600px */
+@media only screen and (max-width: 340px) {
+  /* Adjustments for screens with width up to 340px */
+  header {
+    padding: 5px;
+  }
+
   .logo {
     width: 70px;
   }
 
-  .topnav a:not(:first-child) {
-    display: none;
+  .navigation ul li {
+    margin-left: 5px;
   }
 
-  .topnav a.icon {
-    float: right;
-    display: block;
+  main {
+    padding: 0 10px;
   }
 
-  .topnav.responsive a.icon {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 5px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  /* Adjustments for screens with width up to 410px */
+  header {
+    min-height: 80px;
   }
 
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  .logo {
+    width: 90px;
+  }
+
+  .navigation ul li {
+    margin-left: 8px;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  /* Adjustments for screens with width up to 460px */
+  header {
+    min-height: 100px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .navigation ul li {
+    margin-left: 10px;
+  }
+
+  main {
+    padding: 0 18px;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
 }
